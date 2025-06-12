@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNMAN | Solar Company. Go Solar Today No Cash. No Credit. Just Sunlight.</title>
+    <meta name="description" content="Solar Company. Go Solar Today No Cash. No Credit. Just Sunlight.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #058ddc 0%, #87CEEB 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 2rem auto;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .flip-card-front {
+            background: #f5cc00;
+            color: #333;
+        }
+        
+        .flip-card-back {
+            background: #333;
+            color: #f5cc00;
+            transform: rotateY(180deg);
+        }
+        
+        .rate-crook {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: none;
+            animation: bounce 2s infinite;
+        }
+        
+        .rate-crook::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #ff4444;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .calculator {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+        
+        .calculator h2 {
+            text-align: center;
+            color: #058ddc;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .calc-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #058ddc;
+        }
+        
+        .btn {
+            background: #058ddc;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0470b8;
+        }
+        
+        .results {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #e8f4fd;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .contact {
+            background: #333;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: #f5cc00;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>SUNMAN</h1>
+            <p>No Cash. No Credit. Just Sunlight.</p>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Click for Special Offer!</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Use Code: SUNMAN25<br>Get 10% Off!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rate Crook Villain -->
+    <div class="rate-crook" id="rateCrook">
+        <strong>The Rate Crook says:</strong><br>
+        "Don't go solar. Keep paying the evil utilities your hard earned money."
+    </div>
+
+    <!-- Solar Calculator -->
+    <section class="calculator">
+        <h2>Calculate Your Solar Savings</h2>
+        <form class="calc-form" id="solarCalc">
+            <div class="form-group">
+                <label for="monthlyBill">Monthly Electric Bill ($)</label>
+                <input type="number" id="monthlyBill" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" required>
+                    <option value="">Select Your State</option>
+                    <option value="CA">California</option>
+                    <option value="TX">Texas</option>
+                    <option value="FL">Florida</option>
+                    <option value="NY">New York</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roofSize">Roof Size (sq ft)</label>
+                <input type="number" id="roofSize" required>
+            </div>
+            <button type="submit" class="btn">Calculate Savings</button>
+            
+            <div class="results" id="results">
+                <h3>Your Solar Savings Estimate</h3>
+                <p><strong>Annual Savings:</strong> <span id="annualSavings"></span></p>
+                <p><strong>25-Year Savings:</strong> <span id="totalSavings"></span></p>
+                <p><strong>System Size:</strong> <span id="systemSize"></span> kW</p>
+                <p><strong>Payback Period:</strong> <span id="payback"></span> years</p>
+            </div>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Get Your Free Solar Quote</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <textarea placeholder="Tell us about your energy needs..."></textarea>
+            <button type="submit" class="btn">Get Free Quote</button>
+        </form>
+    </section>
+
+    <script>
+        // Rate Crook Animation
+        function showRateCrook() {
+            const crook = document.getElementById('rateCrook');
+            crook.style.display = 'block';
+            setTimeout(() => {
+                crook.style.display = 'none';
+            }, 8000);
+        }
+        
+        setInterval(showRateCrook, 12000);
+
+        // Solar Calculator
+        document.getElementById('solarCalc').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
+            const location = document.getElementById('location').value;
+            const roofSize = parseFloat(document.getElementById('roofSize').value);
+            
+            // Calculate estimates
+            const annualBill = monthlyBill * 12;
+            const annualSavings = annualBill * 0.85; // 85% savings
+            const totalSavings = annualSavings * 25;
+            const systemSize = Math.round(roofSize / 100); // Rough estimate
+            const systemCost = systemSize * 3000; // $3/watt estimate
+            const payback = Math.round(systemCost / annualSavings);
+            
+            // Display results
+            document.getElementById('annualSavings').textContent = '$' + annualSavings.toLocaleString();
+            document.getElementById('totalSavings').textContent = '$' + totalSavings.toLocaleString();
+            document.getElementById('systemSize').textContent = systemSize;
+            document.getElementById('payback').textContent = payback;
+            document.getElementById('results').style.display = 'block';
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will contact you within 24 hours for your free solar consultation.');
+        });
+    </script>
+</body>
+</html>
