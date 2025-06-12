@@ -1,0 +1,146 @@
+ Replit Developer Prompt: Fix Hero Section to Match Original Design
+plaintext
+Copy
+Edit
+Please update only the hero section of the site at:
+https://5b6bd756-3623-4e7a-9de4-6908dcfb0f3d-00-2dx0p3yj8x4mk.picard.replit.dev/
+
+Goal: Match the old site design shown in the attached image as closely as possible.
+
+---
+
+🔷 1. HERO LAYOUT (Structure)
+
+- Two-column layout:
+  - **Left (60%)**: headline, subtext, buttons, benefits
+  - **Right (40%)**: SolarMan poster image
+- Use `flexbox` with `align-items: center` and proper spacing between columns
+- On mobile: stack columns vertically (image goes below content)
+
+---
+
+🌈 2. BACKGROUND
+
+- Use a **sky/cloudy blue image background** just like the old site
+  - Add via `background-image: url('...')` or embed SVG/cloud pattern
+- Should not be flat blue — mimic the original’s light motion/texture look
+- Optional: add a subtle white gradient overlay for contrast
+
+---
+
+🟡 3. HEADLINE TEXT
+
+Text:  
+```html
+No Cash. No Credit. <span class="highlight-yellow">Just</span> <span class="highlight-faint-yellow">light.</span>
+Font: “Landrina Solid” (or Bebas Neue as fallback)
+
+Font size: 64px desktop, 36px mobile
+
+Line height: 1.2
+
+Styling:
+
+"Just" → bright yellow #FFD60A
+
+"light." → light yellow #F1FADA
+
+Rest of headline: white
+
+Add light shadow for readability over background
+
+📄 4. SUBTEXT
+
+Text:
+
+html
+Copy
+Edit
+If your roof gets sunlight, you may qualify for solar with no credit or money down.  
+Just a utility bill and sunlight.
+Font: Montserrat Regular
+
+Font size: 18px desktop
+
+Color: White or very light gray (#f9f9f9)
+
+Max width: 550px
+
+Add margin-bottom for spacing before buttons
+
+🟧 5. BUTTONS
+
+Button 1: "Start Saving"
+
+Background: Orange #F48C06
+
+Text: White, Bold
+
+Border-radius: 6px
+
+Padding: 14px 28px
+
+Button 2: "Estimate Solar Savings"
+
+Background: Yellow #FFCA3A
+
+Text: Navy or black
+
+Same padding and border-radius
+
+Spaced by 20px horizontally
+
+On mobile: stack vertically with spacing
+
+⬛ 6. BENEFIT BOXES
+
+Create 3 horizontally-aligned boxes (black background)
+
+Each contains:
+
+✅ icon (emoji or inline SVG)
+
+Bold white text in Montserrat
+
+Examples:
+
+✅ $0 Down Solar
+
+✅ New Roof Included
+
+✅ Fix Your Electric Bill
+
+Styling:
+
+Background: Black
+
+Text color: White
+
+Padding: 12px 20px
+
+Border-radius: 6px
+
+Margin-right: 12px
+
+On mobile: stack vertically
+
+🖼️ 7. SOLARMAN IMAGE (RIGHT SIDE)
+
+Use the illustrated SolarMan comic image
+
+Size it to fit naturally within 40% width
+
+Add white border and shadow like the old design
+
+Center vertically relative to text
+
+📱 8. MOBILE RESPONSIVENESS
+
+Stack layout: text above, image below
+
+Reduce headline to 36px
+
+Stack buttons
+
+Stack benefit boxes
+

@@ -1,0 +1,109 @@
+Please update the current homepage layout and styling to match the older reference image provided. Here's what needs to be adjusted:
+
+---
+
+🔷 1. **Hero Background and Layout**
+- Use a **horizontal 2-column layout**:
+  - Left: text + buttons + benefit strip (approx. 60%)
+  - Right: SolarMan image (approx. 40%)
+- Background: gradient from soft blue `#e0f2ff` (top) to `#cce6ff` (bottom)
+- Add generous **padding top and bottom** (80px desktop, 40px mobile)
+
+---
+
+🟡 2. **Main Headline Styling**
+Text:  
+```No Cash. No Credit. Just light.```
+
+- Font: "Landrina Solid" (or closest match, like Bebas Neue)
+- Font Size: 60px desktop, 36px mobile
+- Color:
+  - "No Cash. No Credit." = White
+  - "Just" = Bright Yellow `#FFD60A`
+  - "light." = Pale Yellow `#F1FADA`
+- Add slight text shadow for contrast on blue background
+- Maintain bold styling and tight line-height
+
+---
+
+🔵 3. **Subheadline**
+Text:
+```If your roof gets sunlight, you may qualify for solar with no credit or money down. Just a utility bill and sunlight.```
+
+- Font: Montserrat Regular
+- Font Size: 18px desktop, 16px mobile
+- Color: White or `#f0f0f0`
+- Slight margin-top below headline
+
+---
+
+🟧 4. **Buttons (Side by Side)**
+
+1. **Start Saving**
+   - Background: Orange `#F48C06`
+   - Text: White, Montserrat Bold
+   - Rounded corners
+   - Padding: 14px 28px
+
+2. **Estimate Solar Savings**
+   - Background: Yellow `#FFCA3A`
+   - Text: Dark Navy or Black
+   - Same button styling
+
+- Add 20px margin between
+- On mobile: stack vertically with margin-bottom
+
+---
+
+⬛ 5. **Benefit Strip (Under Buttons)**
+
+Create **3 black horizontal boxes**, each with:
+- ✅ Emoji checkmark
+- Bold text (white):
+  - "$0 Down Solar"
+  - "New Roof Included"
+  - "Fix Your Electric Bill"
+
+Box Styling:
+- Background: Black
+- Text: Montserrat Bold
+- Font size: 16px
+- Rounded corners
+- Inline on desktop, stacked on mobile
+
+---
+
+🖼️ 6. **SolarMan Image (Right Column)**
+
+- Use the comic-style SolarMan image provided
+- Add a light white border or drop shadow
+- Vertically center the image
+- On mobile: image should appear below text and buttons
+
+---
+
+📱 7. **Mobile Responsiveness**
+
+- Stack layout vertically
+- Center-align all text/buttons
+- Scale fonts down appropriately
+- Collapse nav menu into hamburger if not already done
+
+---
+
+🧭 8. **Navigation (Top Header)**
+- Logo: “SolarMan Energy” on the left
+- Nav links on right:
+  - Home
+  - How it Works
+  - Savings
+  - Contact
+
+Font: Montserrat  
+Color: Navy `#002855`  
+Spacing: 20px between items  
+Background: transparent or very light sky blue
+
+---
+
+Please focus on spacing, font sizes, and matching colors/icons from the original reference image. The layout should be bold, clean, and welcoming—like a comic-style superhero ad.
